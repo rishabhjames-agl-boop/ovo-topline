@@ -1,0 +1,1147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>OVO Energy AU · Meta & GA4 Topline · 9 to 22 April 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter+Tight:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #FAFAF7;
+    --bg-card: #FFFFFF;
+    --bg-soft: #F2F1EC;
+    --ink: #16161A;
+    --ink-dim: #44444A;
+    --ink-mute: #72727A;
+    --accent: #1E5641;
+    --accent-soft: #E8F0EC;
+    --accent-glow: rgba(30, 86, 65, 0.15);
+    --good: #1E5641;
+    --bad: #A8352C;
+    --rule: rgba(22, 22, 26, 0.10);
+    --rule-soft: rgba(22, 22, 26, 0.06);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Inter Tight", system-ui, sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  ::selection { background: var(--accent); color: var(--bg); }
+
+  /* Progress bar that tracks scroll */
+  .scroll-progress {
+    position: fixed;
+    top: 0; left: 0;
+    height: 2px;
+    background: var(--accent);
+    width: 0;
+    z-index: 100;
+    transition: width 0.1s ease-out;
+  }
+
+  main {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 4rem 2.5rem 6rem;
+  }
+  @media (max-width: 640px) {
+    main { padding: 2.5rem 1.25rem 4rem; }
+  }
+
+  header { margin-bottom: 5rem; }
+  .eyebrow {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  .eyebrow::before {
+    content: "";
+    width: 28px; height: 1px;
+    background: var(--accent);
+    display: inline-block;
+  }
+  .eyebrow .live-dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--accent);
+    margin-left: 0.5rem;
+    animation: pulse 2s ease-in-out infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; box-shadow: 0 0 0 0 var(--accent-glow); }
+    50% { opacity: 0.6; box-shadow: 0 0 0 8px transparent; }
+  }
+  h1 {
+    font-family: "Fraunces", serif;
+    font-weight: 400;
+    font-size: clamp(2.75rem, 6.5vw, 5.25rem);
+    line-height: 0.98;
+    letter-spacing: -0.025em;
+    margin-bottom: 1.5rem;
+    color: var(--ink);
+  }
+  h1 em {
+    font-style: italic;
+    color: var(--accent);
+    font-weight: 300;
+    position: relative;
+    display: inline-block;
+  }
+  h1 em::after {
+    content: "";
+    position: absolute;
+    bottom: 0.1em; left: 0; right: 0;
+    height: 4px;
+    background: var(--accent-soft);
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: underline-draw 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.8s forwards;
+  }
+  @keyframes underline-draw {
+    to { transform: scaleX(1); }
+  }
+  .sub {
+    font-size: 1.1rem;
+    color: var(--ink-dim);
+    max-width: 46rem;
+    line-height: 1.6;
+  }
+  .meta-strip {
+    margin-top: 2.5rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--rule);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.82rem;
+  }
+  @media (max-width: 720px) {
+    .meta-strip { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+  }
+  .meta-strip dt {
+    color: var(--ink-mute);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.68rem;
+    margin-bottom: 0.4rem;
+  }
+  .meta-strip dd { color: var(--ink); font-weight: 500; }
+
+  section { margin-bottom: 5rem; }
+  .section-num {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.72rem;
+    color: var(--ink-mute);
+    letter-spacing: 0.12em;
+    margin-bottom: 0.75rem;
+  }
+  h2 {
+    font-family: "Fraunces", serif;
+    font-weight: 400;
+    font-size: clamp(1.85rem, 3.5vw, 2.6rem);
+    letter-spacing: -0.015em;
+    line-height: 1.05;
+    margin-bottom: 1.75rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--rule);
+    color: var(--ink);
+  }
+  h3 {
+    font-family: "Inter Tight", sans-serif;
+    font-weight: 600;
+    font-size: 0.78rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    color: var(--ink);
+  }
+  p { color: var(--ink-dim); font-size: 1rem; margin-bottom: 1rem; max-width: 58rem; line-height: 1.65; }
+  p strong { color: var(--ink); font-weight: 600; }
+
+  .insight-lead {
+    font-family: "Fraunces", serif;
+    font-weight: 300;
+    font-size: clamp(1.35rem, 2.4vw, 1.75rem);
+    line-height: 1.35;
+    color: var(--ink);
+    max-width: 50rem;
+    margin-bottom: 2rem;
+    letter-spacing: -0.01em;
+  }
+  .insight-lead .hl {
+    background: linear-gradient(180deg, transparent 60%, var(--accent-soft) 60%);
+    padding: 0 0.15rem;
+    color: var(--ink);
+    font-weight: 500;
+  }
+
+  /* Attribution gap visualization */
+  .gap-viz {
+    background: var(--bg-card);
+    border: 1px solid var(--rule);
+    padding: 2.5rem 2rem;
+    border-radius: 2px;
+    margin: 2.5rem 0;
+  }
+  .gap-viz .gap-title {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--ink-mute);
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  .gap-bars {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: end;
+  }
+  @media (max-width: 640px) {
+    .gap-bars { gap: 1.5rem; }
+  }
+  .gap-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  .gap-bar-visual {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  .gap-bar-fill {
+    width: 80%;
+    max-width: 120px;
+    background: var(--accent);
+    border-radius: 2px 2px 0 0;
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: transform 1.5s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .gap-bar-fill.dim { background: var(--rule); }
+  .gap-bar.revealed .gap-bar-fill { transform: scaleY(1); }
+  .gap-bar-value {
+    font-family: "Fraunces", serif;
+    font-weight: 300;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 1;
+    color: var(--ink);
+    letter-spacing: -0.03em;
+    font-variant-numeric: tabular-nums;
+  }
+  .gap-bar-label {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--ink-mute);
+    text-align: center;
+  }
+  .gap-caption {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--rule-soft);
+    font-family: "Fraunces", serif;
+    font-style: italic;
+    font-size: 1.1rem;
+    color: var(--accent);
+  }
+
+  .kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-bottom: 3rem;
+  }
+  @media (max-width: 860px) {
+    .kpi-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  .kpi {
+    background: var(--bg-card);
+    padding: 1.75rem 1.5rem;
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease, box-shadow 0.3s ease;
+    cursor: default;
+  }
+  .kpi:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent);
+    box-shadow: 0 8px 24px -12px var(--accent-glow);
+  }
+  .kpi-label {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--ink-mute);
+    margin-bottom: 1rem;
+  }
+  .kpi-value {
+    font-family: "Fraunces", serif;
+    font-weight: 400;
+    font-size: 2.4rem;
+    line-height: 1;
+    letter-spacing: -0.025em;
+    margin-bottom: 0.5rem;
+    color: var(--ink);
+    font-variant-numeric: tabular-nums;
+  }
+  .kpi-delta {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.82rem;
+    color: var(--ink-mute);
+    font-weight: 500;
+  }
+  .delta-up { color: var(--good); }
+  .delta-down { color: var(--bad); }
+
+  /* Interactive week toggle */
+  .week-toggle {
+    display: inline-flex;
+    background: var(--bg-soft);
+    border: 1px solid var(--rule);
+    border-radius: 100px;
+    padding: 4px;
+    margin-bottom: 1.5rem;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.75rem;
+  }
+  .week-toggle button {
+    background: transparent;
+    border: none;
+    padding: 0.5rem 1.1rem;
+    border-radius: 100px;
+    color: var(--ink-mute);
+    cursor: pointer;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: color 0.3s ease, background 0.3s ease;
+  }
+  .week-toggle button.active {
+    background: var(--ink);
+    color: var(--bg);
+  }
+  .week-toggle button:hover:not(.active) { color: var(--ink); }
+
+  .wow-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+    font-family: "Inter Tight", sans-serif;
+    font-size: 0.95rem;
+    background: var(--bg-card);
+    border: 1px solid var(--rule);
+  }
+  .wow-table th, .wow-table td {
+    text-align: left;
+    padding: 0.9rem 1.1rem;
+    border-bottom: 1px solid var(--rule-soft);
+  }
+  .wow-table th {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.7rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--ink-mute);
+    border-bottom: 1px solid var(--rule);
+    padding: 0.9rem 1.1rem;
+    background: var(--bg-soft);
+  }
+  .wow-table td { color: var(--ink-dim); transition: background 0.2s ease; }
+  .wow-table tbody tr:hover td { background: var(--bg-soft); }
+  .wow-table td.num { font-variant-numeric: tabular-nums; font-family: "JetBrains Mono", monospace; font-size: 0.88rem; }
+  .wow-table td.campaign { color: var(--ink); font-weight: 500; }
+  .wow-table td.delta-cell { font-family: "JetBrains Mono", monospace; font-size: 0.85rem; font-weight: 500; }
+  .wow-table tr.campaign-break td {
+    background: var(--accent-soft);
+    color: var(--accent);
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    padding: 0.75rem 1.1rem;
+    font-weight: 600;
+  }
+  .wow-table tr.campaign-break:hover td { background: var(--accent-soft); }
+
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  @media (max-width: 860px) {
+    .two-col { grid-template-columns: 1fr; }
+  }
+  .col-card {
+    padding: 2rem;
+    background: var(--bg-card);
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+    position: relative;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+  }
+  .col-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 32px -16px var(--accent-glow);
+  }
+  .col-card::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 48px; height: 2px;
+    background: var(--accent);
+    transition: width 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .col-card:hover::before { width: 100%; }
+  .col-card h3 {
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.1em;
+  }
+  .col-card .tagline {
+    font-family: "Fraunces", serif;
+    font-style: italic;
+    font-size: 1.2rem;
+    color: var(--accent);
+    margin-bottom: 1.25rem;
+    font-weight: 400;
+    line-height: 1.35;
+  }
+  .col-card p { font-size: 0.95rem; margin-bottom: 1.25rem; }
+  .col-card ul { list-style: none; margin-top: 1rem; }
+  .col-card li {
+    padding: 0.7rem 0;
+    border-top: 1px solid var(--rule-soft);
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+    font-size: 0.9rem;
+    color: var(--ink-dim);
+  }
+  .col-card li:first-of-type { border-top: none; padding-top: 0; }
+  .col-card li span.v { font-family: "JetBrains Mono", monospace; color: var(--ink); font-size: 0.88rem; font-weight: 500; }
+
+  /* Demo table with hover bars */
+  .demo-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.92rem;
+    margin-bottom: 2rem;
+    background: var(--bg-card);
+    border: 1px solid var(--rule);
+  }
+  .demo-table th, .demo-table td {
+    padding: 0.8rem 1rem;
+    text-align: right;
+    border-bottom: 1px solid var(--rule-soft);
+    font-variant-numeric: tabular-nums;
+  }
+  .demo-table th:first-child, .demo-table td:first-child { text-align: left; }
+  .demo-table th {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--ink-mute);
+    font-weight: 500;
+    background: var(--bg-soft);
+  }
+  .demo-table td { color: var(--ink-dim); font-family: "JetBrains Mono", monospace; font-size: 0.85rem; }
+  .demo-table td.age { color: var(--ink); font-weight: 600; }
+  .demo-table tr { transition: background 0.25s ease; }
+  .demo-table tbody tr:hover { background: var(--accent-soft); }
+  .demo-table tbody tr:hover td.age { color: var(--accent); }
+  /* Bar cell */
+  .demo-table td.bar-cell {
+    position: relative;
+    text-align: left;
+    padding-right: 1rem;
+    min-width: 120px;
+  }
+  .bar-wrap {
+    position: relative;
+    height: 8px;
+    width: 100%;
+    background: var(--rule-soft);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+  .bar-fill {
+    position: absolute;
+    top: 0; left: 0;
+    height: 100%;
+    background: var(--accent);
+    border-radius: 2px;
+    width: 0;
+    transition: width 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .traffic-list {
+    background: var(--bg-card);
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+  .traffic-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+    padding: 1.1rem 1.5rem;
+    border-bottom: 1px solid var(--rule-soft);
+    align-items: center;
+    gap: 1rem;
+    font-size: 0.92rem;
+    position: relative;
+    transition: background 0.25s ease, padding-left 0.25s ease;
+  }
+  .traffic-row:not(.header):hover {
+    background: var(--bg-soft);
+    padding-left: 2rem;
+  }
+  .traffic-row:last-child { border-bottom: none; }
+  @media (max-width: 720px) {
+    .traffic-row { grid-template-columns: 1.5fr 1fr 1fr; font-size: 0.85rem; padding: 1rem; }
+    .traffic-row .hide-mobile { display: none; }
+  }
+  .traffic-row.header {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--ink-mute);
+    padding: 0.9rem 1.5rem;
+    background: var(--bg-soft);
+  }
+  .traffic-row .source { color: var(--ink); font-weight: 500; }
+  .traffic-row .num { text-align: right; font-variant-numeric: tabular-nums; font-family: "JetBrains Mono", monospace; font-size: 0.85rem; color: var(--ink-dim); }
+  .traffic-row.highlight { background: var(--accent-soft); }
+  .traffic-row.highlight .source { color: var(--accent); font-weight: 600; }
+  .traffic-row.highlight:hover { background: var(--accent-soft); }
+
+  .insight-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin: 2rem 0;
+  }
+  @media (max-width: 860px) {
+    .insight-row { grid-template-columns: 1fr; }
+  }
+  .insight-card {
+    background: var(--bg-card);
+    border: 1px solid var(--rule);
+    padding: 2rem;
+    border-radius: 2px;
+    border-left: 3px solid var(--accent);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease, border-left-width 0.3s ease;
+  }
+  .insight-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 32px -16px var(--accent-glow);
+    border-left-width: 6px;
+  }
+  .insight-card .big-number {
+    font-family: "Fraunces", serif;
+    font-weight: 300;
+    font-size: clamp(3rem, 6vw, 4.5rem);
+    line-height: 0.95;
+    color: var(--accent);
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+    font-variant-numeric: tabular-nums;
+  }
+  .insight-card .big-number sup {
+    font-size: 0.45em;
+    font-weight: 400;
+    color: var(--ink-mute);
+    margin-left: 0.2em;
+  }
+  .insight-card .caption {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--ink-mute);
+    margin-bottom: 0.75rem;
+  }
+  .insight-card .body {
+    font-size: 0.98rem;
+    color: var(--ink-dim);
+    line-height: 1.5;
+    margin-bottom: 0;
+  }
+  .insight-card .body strong { color: var(--ink); }
+
+  .pull-insight {
+    padding: 2.5rem 3rem;
+    background: var(--ink);
+    color: var(--bg);
+    margin: 2.5rem 0;
+    border-radius: 2px;
+    position: relative;
+    overflow: hidden;
+  }
+  .pull-insight::before {
+    content: "";
+    position: absolute;
+    top: -50%; right: -20%;
+    width: 400px; height: 400px;
+    background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
+    opacity: 0.6;
+    animation: drift 12s ease-in-out infinite alternate;
+  }
+  @keyframes drift {
+    0% { transform: translate(0, 0) scale(1); }
+    100% { transform: translate(-30px, 20px) scale(1.15); }
+  }
+  .pull-insight .label {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--accent-soft);
+    margin-bottom: 1rem;
+    opacity: 0.85;
+    position: relative;
+  }
+  .pull-insight p {
+    font-family: "Fraunces", serif;
+    font-size: clamp(1.4rem, 2.4vw, 1.85rem);
+    font-weight: 300;
+    line-height: 1.35;
+    color: var(--bg);
+    margin: 0;
+    max-width: none;
+    letter-spacing: -0.01em;
+    position: relative;
+  }
+  .pull-insight p strong {
+    color: #E8C78B;
+    font-weight: 400;
+  }
+  @media (max-width: 640px) {
+    .pull-insight { padding: 2rem 1.5rem; }
+  }
+
+  .action-list {
+    counter-reset: action;
+    list-style: none;
+    margin-top: 1.5rem;
+    background: var(--bg-card);
+    border: 1px solid var(--rule);
+  }
+  .action-list li {
+    counter-increment: action;
+    padding: 1.75rem 2rem 1.75rem 5.5rem;
+    border-bottom: 1px solid var(--rule-soft);
+    position: relative;
+    transition: padding-left 0.4s cubic-bezier(0.16, 1, 0.3, 1), background 0.3s ease;
+    cursor: default;
+  }
+  .action-list li:hover {
+    background: var(--bg-soft);
+    padding-left: 6.5rem;
+  }
+  .action-list li:last-child { border-bottom: none; }
+  .action-list li::before {
+    content: counter(action, decimal-leading-zero);
+    position: absolute;
+    left: 2rem; top: 1.75rem;
+    font-family: "Fraunces", serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 2.25rem;
+    color: var(--accent);
+    line-height: 1;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .action-list li:hover::before { transform: translateX(4px) scale(1.1); }
+  .action-list h4 {
+    font-family: "Inter Tight", sans-serif;
+    font-size: 1.08rem;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 0.4rem;
+  }
+  .action-list p { font-size: 0.95rem; margin-bottom: 0; color: var(--ink-dim); }
+  @media (max-width: 640px) {
+    .action-list li { padding: 1.5rem 1.25rem 1.5rem 4rem; }
+    .action-list li::before { left: 1.25rem; }
+    .action-list li:hover { padding-left: 4.5rem; }
+  }
+
+  footer {
+    margin-top: 6rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--rule);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.72rem;
+    color: var(--ink-mute);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+  @media (max-width: 640px) {
+    footer { flex-direction: column; gap: 1rem; align-items: flex-start; }
+  }
+
+  /* Entrance animations */
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    animation: rise 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+  .reveal-1 { animation-delay: 0.05s; }
+  .reveal-2 { animation-delay: 0.15s; }
+  .reveal-3 { animation-delay: 0.25s; }
+  .reveal-4 { animation-delay: 0.35s; }
+  @keyframes rise {
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Scroll reveal */
+  .fade-in-up {
+    opacity: 0;
+    transform: translateY(32px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .fade-in-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @media print {
+    .reveal, .fade-in-up { opacity: 1; transform: none; animation: none; }
+    main { padding: 1rem; }
+    section { page-break-inside: avoid; }
+    .pull-insight { background: var(--bg-soft); color: var(--ink); }
+    .pull-insight p { color: var(--ink); }
+    .pull-insight p strong { color: var(--accent); }
+    .scroll-progress { display: none; }
+    .gap-bar-fill { transform: scaleY(1) !important; }
+    .bar-fill { width: var(--bar-width, 0) !important; }
+  }
+</style>
+</head>
+<body>
+<div class="scroll-progress" id="scrollProgress"></div>
+<main>
+
+  <header>
+    <div class="eyebrow reveal reveal-1">OVO Energy AU · Executive Topline <span class="live-dot"></span></div>
+    <h1 class="reveal reveal-2">Meta &amp; site <em>performance read</em><br/>9 to 22 April 2026</h1>
+    <p class="sub reveal reveal-3">A two-week snapshot across the FY26 EV Interest and Free 3 Plan campaigns, joined to GA4 channel attribution. The headline: we are buying traffic efficiently, but the conversion system is not giving Meta credit for the pipeline it is creating.</p>
+    <dl class="meta-strip reveal reveal-4">
+      <div><dt>Account</dt><dd>OVO Energy AU</dd></div>
+      <div><dt>Window</dt><dd>14 days</dd></div>
+      <div><dt>Meta Spend</dt><dd>$14,967</dd></div>
+      <div><dt>Prepared</dt><dd>23 April 2026</dd></div>
+    </dl>
+  </header>
+
+  <section>
+    <div class="section-num fade-in-up">01 / The headline</div>
+    <h2 class="fade-in-up">Three things to know</h2>
+
+    <p class="insight-lead fade-in-up">
+      Meta sent <span class="hl">11,215 sessions</span> to the site this fortnight, making it our third largest traffic source. It reported <span class="hl">352 applications</span> back to the platform. GA4 credited it with <span class="hl">11</span>. The gap is the story.
+    </p>
+
+    <!-- Attribution gap bar visualization -->
+    <div class="gap-viz fade-in-up" id="gapViz">
+      <div class="gap-title">The attribution gap · Same fortnight, two numbers</div>
+      <div class="gap-bars">
+        <div class="gap-bar" id="gapBarMeta">
+          <div class="gap-bar-visual">
+            <div class="gap-bar-value"><span class="count-up" data-target="352">0</span></div>
+            <div class="gap-bar-fill" style="height: 180px;"></div>
+          </div>
+          <div class="gap-bar-label">Meta reported<br/>applications</div>
+        </div>
+        <div class="gap-bar" id="gapBarGa4">
+          <div class="gap-bar-visual">
+            <div class="gap-bar-value"><span class="count-up" data-target="11">0</span></div>
+            <div class="gap-bar-fill dim" style="height: 5.6px;"></div>
+          </div>
+          <div class="gap-bar-label">GA4 credited<br/>conversions</div>
+        </div>
+      </div>
+      <div class="gap-caption">A <strong style="color: var(--accent); font-weight: 500;">32x</strong> difference between what Meta sees and what the site is crediting.</div>
+    </div>
+
+    <div class="insight-row">
+      <div class="insight-card fade-in-up">
+        <div class="caption">Meta is scaling efficiently</div>
+        <div class="big-number"><span class="count-up" data-target="19">0</span><sup>%</sup></div>
+        <p class="body"><strong>Cost per click fell 19% week on week</strong> on EV Interest, while click-through rate climbed 18%. We are getting more engaged traffic for less money as spend scales up.</p>
+      </div>
+      <div class="insight-card fade-in-up">
+        <div class="caption">Free 3 Plan is the conversion engine</div>
+        <div class="big-number">$<span class="count-up" data-target="23">0</span></div>
+        <p class="body"><strong>Cost per application on Free 3 Plan is holding at around $23</strong>, driven almost entirely by women aged 35 to 44 responding to the "Free 3 General" video creative.</p>
+      </div>
+    </div>
+
+    <div class="pull-insight fade-in-up">
+      <div class="label">The implication</div>
+      <p>Meta is almost certainly feeding the <strong>direct returns</strong> and <strong>branded Google searches</strong> that convert at 3.4% and 1.9%. Last-click attribution is giving that credit to other channels. True Meta contribution is likely <strong>3 to 5 times</strong> what the dashboard shows.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-num fade-in-up">02 / Topline</div>
+    <h2 class="fade-in-up">Two weeks at a glance</h2>
+
+    <div class="kpi-grid">
+      <div class="kpi fade-in-up">
+        <div class="kpi-label">Total Spend</div>
+        <div class="kpi-value">$<span class="count-up" data-target="14.97" data-decimals="2">0</span>K</div>
+        <div class="kpi-delta delta-up">+38% WoW</div>
+      </div>
+      <div class="kpi fade-in-up">
+        <div class="kpi-label">Impressions</div>
+        <div class="kpi-value"><span class="count-up" data-target="1.14" data-decimals="2">0</span>M</div>
+        <div class="kpi-delta delta-up">+37% WoW</div>
+      </div>
+      <div class="kpi fade-in-up">
+        <div class="kpi-label">Link Clicks</div>
+        <div class="kpi-value"><span class="count-up" data-target="31246" data-format="comma">0</span></div>
+        <div class="kpi-delta delta-up">+39% WoW</div>
+      </div>
+      <div class="kpi fade-in-up">
+        <div class="kpi-label">Applications</div>
+        <div class="kpi-value"><span class="count-up" data-target="352">0</span></div>
+        <div class="kpi-delta">Meta reported</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-num fade-in-up">03 / Week on week</div>
+    <h2 class="fade-in-up">A tale of two campaigns</h2>
+    <p class="fade-in-up">Spend scaled across both campaigns. <strong>EV Interest became cheaper and more engaging.</strong> Free 3 Plan's CPC rose 42% as we pushed more budget into the video format, which is a reach-first unit, not a click-driver.</p>
+
+    <div class="fade-in-up">
+      <div class="week-toggle" role="tablist" aria-label="Week selector">
+        <button class="active" data-view="both" role="tab" aria-selected="true">Both weeks</button>
+        <button data-view="w1" role="tab" aria-selected="false">Week 1 only</button>
+        <button data-view="w2" role="tab" aria-selected="false">Week 2 only</button>
+      </div>
+
+      <table class="wow-table">
+        <thead>
+          <tr>
+            <th>Metric</th>
+            <th class="col-w1">Week 1 (9 to 15 Apr)</th>
+            <th class="col-w2">Week 2 (16 to 22 Apr)</th>
+            <th>Change</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="campaign-break"><td colspan="4">EV Interest · National</td></tr>
+          <tr><td class="campaign">Spend</td><td class="num col-w1">$3,669</td><td class="num col-w2">$4,759</td><td class="delta-cell delta-up">+30%</td></tr>
+          <tr><td class="campaign">Impressions</td><td class="num col-w1">315.5K</td><td class="num col-w2">427.6K</td><td class="delta-cell delta-up">+35%</td></tr>
+          <tr><td class="campaign">Link Clicks</td><td class="num col-w1">10,618</td><td class="num col-w2">17,049</td><td class="delta-cell delta-up">+61%</td></tr>
+          <tr><td class="campaign">CTR</td><td class="num col-w1">3.37%</td><td class="num col-w2">3.99%</td><td class="delta-cell delta-up">+18%</td></tr>
+          <tr><td class="campaign">CPC</td><td class="num col-w1">$0.35</td><td class="num col-w2">$0.28</td><td class="delta-cell delta-up">19% cheaper</td></tr>
+
+          <tr class="campaign-break"><td colspan="4">Free 3 Plan · VIC &amp; NCEF</td></tr>
+          <tr><td class="campaign">Spend</td><td class="num col-w1">$2,423</td><td class="num col-w2">$3,569</td><td class="delta-cell delta-up">+47%</td></tr>
+          <tr><td class="campaign">Impressions</td><td class="num col-w1">163K</td><td class="num col-w2">234K</td><td class="delta-cell delta-up">+43%</td></tr>
+          <tr><td class="campaign">Link Clicks</td><td class="num col-w1">1,754</td><td class="num col-w2">1,825</td><td class="delta-cell">+4%</td></tr>
+          <tr><td class="campaign">CTR</td><td class="num col-w1">1.07%</td><td class="num col-w2">0.78%</td><td class="delta-cell delta-down">27% lower</td></tr>
+          <tr><td class="campaign">CPC</td><td class="num col-w1">$1.38</td><td class="num col-w2">$1.96</td><td class="delta-cell delta-down">42% more</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-num fade-in-up">04 / Creative &amp; audience</div>
+    <h2 class="fade-in-up">Which creative wins with which customer</h2>
+
+    <div class="two-col">
+      <div class="col-card fade-in-up">
+        <h3>EV Interest · "AI Hand" static</h3>
+        <div class="tagline">Male, 35 to 54, high intent.</div>
+        <p>A single static creative is doing all the work, running in both the national audience and the lookalike of site visitors. It drives 27,000 plus clicks at 30 cents each, with CTR climbing steadily through the older age brackets.</p>
+        <ul>
+          <li>Best converting age <span class="v">35 to 44</span></li>
+          <li>Highest CTR bracket <span class="v">65+ at 5.28%</span></li>
+          <li>Male share of spend <span class="v">78%</span></li>
+          <li>Male cost per application <span class="v">$78.86</span></li>
+          <li>Female cost per application <span class="v">$134.05</span></li>
+        </ul>
+      </div>
+
+      <div class="col-card fade-in-up">
+        <h3>Free 3 Plan · "Free 3 General" video</h3>
+        <div class="tagline">Female, 35 to 44, ready to switch.</div>
+        <p>"General" beats the "Update" variant in every state it runs against. Free 3 converts women at half the cost it converts men, which is the exact inverse of EV Interest. Two creative systems, two very different customers.</p>
+        <ul>
+          <li>Best converting age <span class="v">35 to 44</span></li>
+          <li>Female cost per application <span class="v">$15.79</span></li>
+          <li>Male cost per application <span class="v">$32.17</span></li>
+          <li>Total applications (14d) <span class="v">254</span></li>
+          <li>Blended cost per application <span class="v">$23</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <h3 style="margin-top: 3rem;" class="fade-in-up">EV Interest by age · applications</h3>
+    <table class="demo-table fade-in-up">
+      <thead>
+        <tr><th>Age</th><th>Spend</th><th>Clicks</th><th>CTR</th><th>Apps</th><th style="text-align: left;">Relative volume</th></tr>
+      </thead>
+      <tbody data-max-ev="45">
+        <tr><td class="age">18 to 24</td><td>$132</td><td>307</td><td>2.07%</td><td>0</td><td class="bar-cell"><div class="bar-wrap"><div class="bar-fill" data-value="0"></div></div></td></tr>
+        <tr><td class="age">25 to 34</td><td>$1,135</td><td>3,049</td><td>3.02%</td><td>14</td><td class="bar-cell"><div class="bar-wrap"><div class="bar-fill" data-value="14"></div></div></td></tr>
+        <tr><td class="age">35 to 44</td><td>$2,664</td><td>8,447</td><td>3.44%</td><td>45</td><td class="bar-cell"><div class="bar-wrap"><div class="bar-fill" data-value="45"></div></div></td></tr>
+        <tr><td class="age">45 to 54</td><td>$2,215</td><td>7,317</td><td>3.80%</td><td>27</td><td class="bar-cell"><div class="bar-wrap"><div class="bar-fill" data-value="27"></div></div></td></tr>
+        <tr><td class="age">55 to 64</td><td>$1,230</td><td>4,214</td><td>4.29%</td><td>11</td><td class="bar-cell"><div class="bar-wrap"><div class="bar-fill" data-value="11"></div></div></td></tr>
+        <tr><td class="age">65+</td><td>$1,052</td><td>3,872</td><td>5.28%</td><td>3</td><td class="bar-cell"><div class="bar-wrap"><div class="bar-fill" data-value="3"></div></div></td></tr>
+      </tbody>
+    </table>
+
+    <h3 style="margin-top: 2.5rem;" class="fade-in-up">Free 3 Plan by age · applications</h3>
+    <table class="demo-table fade-in-up">
+      <thead>
+        <tr><th>Age</th><th>Spend</th><th>Clicks</th><th>CTR</th><th>Apps</th><th style="text-align: left;">Relative volume</th></tr>
+      </thead>
+      <tbody data-max-f3="138">
+        <tr><td class="age">18 to 24</td><td>$103</td><td>57</td><td>0.62%</td><td>4</td><td class="bar-cell"><div class="bar-wrap"><div class="bar-fill" data-value="4" data-max="138"></div></div></td></tr>
+        <tr><td class="age">25 to 34</td><td>$1,280</td><td>551</td><td>0.63%</td><td>47</td><td class="bar-cell"><div class="bar-wrap"><div class="bar-fill" data-value="47" data-max="138"></div></div></td></tr>
+        <tr><td class="age">35 to 44</td><td>$2,232</td><td>1,153</td><td>0.81%</td><td>138</td><td class="bar-cell"><div class="bar-wrap"><div class="bar-fill" data-value="138" data-max="138"></div></div></td></tr>
+        <tr><td class="age">45 to 54</td><td>$1,329</td><td>878</td><td>0.99%</td><td>47</td><td class="bar-cell"><div class="bar-wrap"><div class="bar-fill" data-value="47" data-max="138"></div></div></td></tr>
+        <tr><td class="age">55 to 64</td><td>$614</td><td>476</td><td>1.18%</td><td>10</td><td class="bar-cell"><div class="bar-wrap"><div class="bar-fill" data-value="10" data-max="138"></div></div></td></tr>
+        <tr><td class="age">65+</td><td>$435</td><td>464</td><td>1.73%</td><td>11</td><td class="bar-cell"><div class="bar-wrap"><div class="bar-fill" data-value="11" data-max="138"></div></div></td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <div class="section-num fade-in-up">05 / Site traffic</div>
+    <h2 class="fade-in-up">Where visitors are actually coming from</h2>
+
+    <p class="fade-in-up">Meta is our third biggest source of traffic. But its last-click conversion rate reads as 0.10%. The more interesting number sits elsewhere in the table: <strong>Refer a Friend converts at 17%</strong>, the best of any channel by a wide margin.</p>
+
+    <div class="traffic-list fade-in-up">
+      <div class="traffic-row header">
+        <div>Source &amp; Medium</div>
+        <div class="num">Sessions</div>
+        <div class="num hide-mobile">Engaged %</div>
+        <div class="num hide-mobile">Avg. Duration</div>
+        <div class="num">Conversions</div>
+      </div>
+      <div class="traffic-row">
+        <div class="source">Google organic</div>
+        <div class="num">36,837</div>
+        <div class="num hide-mobile">47.7%</div>
+        <div class="num hide-mobile">3m 17s</div>
+        <div class="num">715</div>
+      </div>
+      <div class="traffic-row">
+        <div class="source">Direct</div>
+        <div class="num">23,733</div>
+        <div class="num hide-mobile">44.2%</div>
+        <div class="num hide-mobile">2m 47s</div>
+        <div class="num">796</div>
+      </div>
+      <div class="traffic-row highlight">
+        <div class="source">Meta paid social</div>
+        <div class="num">11,215</div>
+        <div class="num hide-mobile">23.2%</div>
+        <div class="num hide-mobile">0m 45s</div>
+        <div class="num">11</div>
+      </div>
+      <div class="traffic-row">
+        <div class="source">Refer a Friend</div>
+        <div class="num">2,725</div>
+        <div class="num hide-mobile">62.6%</div>
+        <div class="num hide-mobile">5m 19s</div>
+        <div class="num">466</div>
+      </div>
+      <div class="traffic-row">
+        <div class="source">Bing organic</div>
+        <div class="num">1,850</div>
+        <div class="num hide-mobile">54.5%</div>
+        <div class="num hide-mobile">4m 37s</div>
+        <div class="num">45</div>
+      </div>
+      <div class="traffic-row">
+        <div class="source">Agent console</div>
+        <div class="num">745</div>
+        <div class="num hide-mobile">60.3%</div>
+        <div class="num hide-mobile">16m 00s</div>
+        <div class="num">144</div>
+      </div>
+      <div class="traffic-row">
+        <div class="source">Electrify Me (UTM)</div>
+        <div class="num">172</div>
+        <div class="num hide-mobile">69.2%</div>
+        <div class="num hide-mobile">6m 30s</div>
+        <div class="num">63</div>
+      </div>
+    </div>
+
+    <div class="insight-row" style="margin-top: 2.5rem;">
+      <div class="insight-card fade-in-up">
+        <div class="caption">The conversion machine nobody talks about</div>
+        <div class="big-number"><span class="count-up" data-target="17">0</span><sup>%</sup></div>
+        <p class="body"><strong>Refer a Friend converts at 17%</strong> across 2,725 sessions. That is 170 times better than paid social. Warming Meta clickers with a referral offer is the single biggest lever we are not pulling.</p>
+      </div>
+      <div class="insight-card fade-in-up">
+        <div class="caption">Hidden budget leakage</div>
+        <div class="big-number"><span class="count-up" data-target="4">0</span></div>
+        <p class="body"><strong>Four different UTM conventions</strong> for Meta traffic are fragmenting the data: meta, fb, ig, and SiteLink variants, plus 200 plus untagged sessions arriving as Facebook referral. One fix, one clean number.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-num fade-in-up">06 / Next two weeks</div>
+    <h2 class="fade-in-up">What we are doing about it</h2>
+
+    <ol class="action-list fade-in-up">
+      <li>
+        <h4>Fix the Meta to GA4 attribution gap</h4>
+        <p>Implement the Meta Conversions API with offline upload from GA4. This closes the 352 to 11 conversion gap and gives Free 3 Plan's learning phase the signal it needs to scale efficiently.</p>
+      </li>
+      <li>
+        <h4>Consolidate UTM tagging across all Meta ads</h4>
+        <p>Move every Meta placement to a single source and medium convention. Four fragmented sources are currently hiding the true size of paid social's contribution to the site.</p>
+      </li>
+      <li>
+        <h4>Refresh or pause the Free 3 "Update" creative</h4>
+        <p>"Free 3 General" outperforms "Free 3 Update" on clicks, cost, and applications in every state it runs. Redirect that budget into a new "General" variant or into scaling the existing winner.</p>
+      </li>
+      <li>
+        <h4>Test Refer a Friend creative as a Meta retargeting layer</h4>
+        <p>RAF converts at 17% on 2,725 sessions. Serving Meta clickers a follow-up ad built around the referral offer could close the leaky funnel and recover conversions we are currently losing to direct and organic.</p>
+      </li>
+    </ol>
+  </section>
+
+  <footer>
+    <div>OVO Energy AU · Performance Read</div>
+    <div>23.04.2026</div>
+  </footer>
+
+</main>
+
+<script>
+  // 1. Scroll progress bar
+  const progressBar = document.getElementById('scrollProgress');
+  window.addEventListener('scroll', () => {
+    const max = document.documentElement.scrollHeight - window.innerHeight;
+    const pct = Math.min(100, (window.scrollY / max) * 100);
+    progressBar.style.width = pct + '%';
+  });
+
+  // 2. Count-up numbers on scroll into view
+  const easeOutQuart = t => 1 - Math.pow(1 - t, 4);
+  function formatNumber(val, decimals, useComma) {
+    let n = decimals > 0 ? val.toFixed(decimals) : Math.round(val).toString();
+    if (useComma && decimals === 0) {
+      n = Math.round(val).toLocaleString('en-US');
+    }
+    return n;
+  }
+  function countUp(el) {
+    if (el.dataset.done) return;
+    el.dataset.done = '1';
+    const target = parseFloat(el.dataset.target);
+    const decimals = parseInt(el.dataset.decimals || '0', 10);
+    const useComma = el.dataset.format === 'comma';
+    const duration = 1800;
+    const start = performance.now();
+    function frame(now) {
+      const elapsed = now - start;
+      const t = Math.min(1, elapsed / duration);
+      const eased = easeOutQuart(t);
+      const current = target * eased;
+      el.textContent = formatNumber(current, decimals, useComma);
+      if (t < 1) requestAnimationFrame(frame);
+      else el.textContent = formatNumber(target, decimals, useComma);
+    }
+    requestAnimationFrame(frame);
+  }
+
+  // 3. Hover bar fills reveal on scroll
+  function revealBar(bar) {
+    if (bar.dataset.done) return;
+    bar.dataset.done = '1';
+    const value = parseFloat(bar.dataset.value);
+    const max = parseFloat(bar.dataset.max) || 45;
+    const pct = Math.min(100, (value / max) * 100);
+    bar.style.setProperty('--bar-width', pct + '%');
+    bar.style.width = pct + '%';
+  }
+
+  // 4. Attribution gap bars reveal
+  function revealGapBars() {
+    document.querySelectorAll('.gap-bar').forEach(b => b.classList.add('revealed'));
+  }
+
+  // 5. Intersection Observer for fade-in + triggers
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('visible');
+      // Trigger count-up for any .count-up inside
+      entry.target.querySelectorAll('.count-up').forEach(countUp);
+      // If this IS a count-up
+      if (entry.target.classList.contains('count-up')) countUp(entry.target);
+      // Trigger bar reveals
+      entry.target.querySelectorAll('.bar-fill').forEach(revealBar);
+      // Attribution gap
+      if (entry.target.id === 'gapViz') revealGapBars();
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -80px 0px' });
+
+  document.querySelectorAll('.fade-in-up, .count-up').forEach(el => observer.observe(el));
+
+  // 6. Week toggle behaviour
+  const toggleButtons = document.querySelectorAll('.week-toggle button');
+  const w1Cells = document.querySelectorAll('.col-w1');
+  const w2Cells = document.querySelectorAll('.col-w2');
+  toggleButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      toggleButtons.forEach(b => { b.classList.remove('active'); b.setAttribute('aria-selected','false'); });
+      btn.classList.add('active');
+      btn.setAttribute('aria-selected','true');
+      const view = btn.dataset.view;
+      w1Cells.forEach(c => c.style.display = (view === 'w2') ? 'none' : '');
+      w2Cells.forEach(c => c.style.display = (view === 'w1') ? 'none' : '');
+    });
+  });
+</script>
+</body>
+</html>
